@@ -120,7 +120,7 @@ class TlsConfig(Config):
         """ % locals()
 
     def read_tls_certificate(self, cert_path):
-        cert_pem = self.read_file(cert_path, "tls_certificate")
+        cert_pem = self.read_file(cert_path)
         return crypto.load_certificate(crypto.FILETYPE_PEM, cert_pem)
 
     def read_tls_private_key(self, private_key_path):
